@@ -1,0 +1,32 @@
+{
+    "name": "seafarer/laravel-yunpian-sms",
+    "description": "Laravel package for https://github.com/yunpian/sms.",
+    "keywords": ["sms"],
+    "require": {
+        "laravel/framework": "4.2.10"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "seafarer",
+            "email": "developer@seafarer.me"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+
+        ],
+        "psr-4": {
+            "Seafarer\\YunPianSms\\": "src/YunPianSms"
+        }
+    },
+    "minimum-stability": "stable",
+    "repositories": [
+        {
+            "type": "composer", "url": "http://packagist.phpcomposer.com"
+        },
+        {
+            "packagist": false
+        }
+    ]
+}
