@@ -18,5 +18,8 @@
             "Seafarer\\YunpianSms": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "require-dev": {
+        "mockery/mockery": "^0.9.4"
+    }
 }
