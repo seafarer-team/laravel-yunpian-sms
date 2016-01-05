@@ -1,6 +1,8 @@
 {
-    "name": "seafarer/yunpian-sms",
+    "name": "seafarer/laravel-yunpian-sms",
     "description": "Laravel package for https://github.com/yunpian/sms.",
+    "keywords": ["sms", "laravel4.2"],
+    "license": "MIT",
     "authors": [
         {
             "name": "seafarer",

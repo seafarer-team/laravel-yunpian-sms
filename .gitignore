@@ -1,5 +1,10 @@
-/vendor
+/bootstrap/compiled.php
+.DS_Store
+.env.*.php
+.env.php
+.env
+.travis.yml
 composer.phar
 composer.lock
-.DS_Store
-.travis.yml
+
+/vendor/
