@@ -28,7 +28,10 @@ class YunpianSmsServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+        $this->app->bind('yunpiansms', function()
+        {
+            return new YunpianSmsClient;
+        });
 	}
 
 	/**
