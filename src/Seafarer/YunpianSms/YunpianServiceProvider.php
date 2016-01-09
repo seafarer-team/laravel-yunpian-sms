@@ -1,8 +1,9 @@
 <?php namespace Seafarer\YunpianSms;
 
 use Illuminate\Support\ServiceProvider;
+use Seafarer\YunpianSms\Account\AccountClient;
 
-class YunpianSmsServiceProvider extends ServiceProvider {
+class YunpianServiceProvider extends ServiceProvider {
 
 	/**
 	 * Indicates if loading of the provider is deferred.
@@ -28,9 +29,9 @@ class YunpianSmsServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-        $this->app->bind('yunpiansms', function()
+        $this->app->bind('yunpian.account', function()
         {
-            return new YunpianSmsClient;
+            return new AccountClient;
         });
 	}
 
