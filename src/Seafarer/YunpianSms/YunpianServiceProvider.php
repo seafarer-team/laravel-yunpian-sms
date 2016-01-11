@@ -2,6 +2,8 @@
 
 use Illuminate\Support\ServiceProvider;
 use Seafarer\YunpianSms\Account\AccountClient;
+use Seafarer\YunpianSms\Sms\SmsClient;
+use Seafarer\YunpianSms\Voice\VoiceClient;
 
 class YunpianServiceProvider extends ServiceProvider {
 
@@ -20,7 +22,7 @@ class YunpianServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('seafarer/yunpian-sms');
-	}
+    }
 
 	/**
 	 * Register the service provider.
@@ -32,6 +34,23 @@ class YunpianServiceProvider extends ServiceProvider {
         $this->app->bind('yunpian.account', function()
         {
             return new AccountClient;
+        });
+
+        $this->app->bind('yunpian.sms', function()
+        {
+            return new SmsClient;
+        });
+
+        $this->app->bind('yunpian.voice', function()
+        {
+            return new VoiceClient;
+        });
+
+        $this->app->booting(function () {
+            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+            $loader->alias('YunpianAccount', 'Seafarer\YunpianSms\Account\Facades\YunpianAccount');
+            $loader->alias('YunpianSms', 'Seafarer\YunpianSms\Sms\Facades\YunpianSms');
+            $loader->alias('YunpianVoice', 'Seafarer\YunpianSms\Voice\Facades\YunpianVoice');
         });
 	}
 
