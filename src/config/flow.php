@@ -4,7 +4,7 @@
  * 流量api配置相关
  */
 
-$base_uri = Config::get('yunpian-sms::yunpian.base_uri') . 'flow/';
+$base_uri = Config::get('laravel-yunpian-sms::yunpian.base_uri') . 'flow/';
 
 return array(
     /**

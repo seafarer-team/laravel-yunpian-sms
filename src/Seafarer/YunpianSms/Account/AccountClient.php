@@ -31,7 +31,7 @@ class AccountClient {
      */
     public function getAccount($data)
     {
-        $this->setUp()->dispatch($data, Config::get('yunpian-sms::account.get_uri'))->shutDown();
+        $this->setUp()->dispatch($data, Config::get('laravel-yunpian-sms::account.get_uri'))->shutDown();
         return $this->inbox;
     }
 

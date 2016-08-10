@@ -31,7 +31,7 @@ class VoiceClient {
      */
     public function send($data)
     {
-        $this->setUp()->dispatch($data, Config::get('yunpian-sms::voice.send_uri'))->shutDown();
+        $this->setUp()->dispatch($data, Config::get('laravel-yunpian-sms::voice.send_uri'))->shutDown();
         return $this->inbox;
     }
 
