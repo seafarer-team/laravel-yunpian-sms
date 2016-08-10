@@ -4,7 +4,7 @@
  * 模板api配置相关
  */
 
-$base_uri = Config::get('yunpian-sms::yunpian.base_uri') . 'tpl/';
+$base_uri = Config::get('laravel-yunpian-sms::yunpian.base_uri') . 'tpl/';
 
 return array(
     /**

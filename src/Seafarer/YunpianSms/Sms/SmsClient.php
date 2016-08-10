@@ -31,7 +31,7 @@ class SmsClient {
      */
     public function send($data)
     {
-        $this->setUp()->dispatch($data, Config::get('yunpian-sms::sms.send_uri'))->shutDown();
+        $this->setUp()->dispatch($data, Config::get('laravel-yunpian-sms::sms.send_uri'))->shutDown();
         return $this->inbox;
     }
 
