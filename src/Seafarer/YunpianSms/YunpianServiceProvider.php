@@ -21,7 +21,7 @@ class YunpianServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('seafarer/yunpian-sms');
+		$this->package('seafarer/laravel-yunpian-sms');
     }
 
 	/**
