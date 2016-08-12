@@ -41,6 +41,11 @@ class YunpianServiceProvider extends ServiceProvider {
             return new SmsClient;
         });
 
+        $this->app->bind('yunpian.template', function()
+        {
+            return new TemplateClient;
+        });
+
         $this->app->bind('yunpian.voice', function()
         {
             return new VoiceClient;
@@ -50,6 +55,7 @@ class YunpianServiceProvider extends ServiceProvider {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
             $loader->alias('YunpianAccount', 'Seafarer\YunpianSms\Account\Facades\YunpianAccount');
             $loader->alias('YunpianSms', 'Seafarer\YunpianSms\Sms\Facades\YunpianSms');
+            $loader->alias('YunpianTemplate', 'Seafarer\YunpianSms\Template\Facades\YunpianTemplate');
             $loader->alias('YunpianVoice', 'Seafarer\YunpianSms\Voice\Facades\YunpianVoice');
         });
 	}

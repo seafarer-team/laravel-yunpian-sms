@@ -7,10 +7,6 @@
 $base_uri = Config::get('laravel-yunpian-sms::yunpian.base_uri') . 'tpl/';
 
 return array(
-    /**
-     * 获取默认模板api
-     */
-    'get_default_uri' => $base_uri . 'get_default.json',
 
     /**
      * 添加模板api
@@ -20,7 +16,7 @@ return array(
     /**
      * 获取模板api
      */
-    'get_assign_uri' => $base_uri . 'get.json',
+    'get_uri' => $base_uri . 'get.json',
 
     /**
      * 修改模板api
