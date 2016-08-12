@@ -3,6 +3,7 @@
 use Illuminate\Support\ServiceProvider;
 use Seafarer\YunpianSms\Account\AccountClient;
 use Seafarer\YunpianSms\Sms\SmsClient;
+use Seafarer\YunpianSms\Template\TemplateClient;
 use Seafarer\YunpianSms\Voice\VoiceClient;
 
 class YunpianServiceProvider extends ServiceProvider {
